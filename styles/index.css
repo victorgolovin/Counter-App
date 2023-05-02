@@ -45,6 +45,14 @@
   opacity: 0.8;
 }
 
+.counter-btn:active {
+    box-shadow: 0 0 2px 2px #4191ff;
+}
+
+.counter-btn-reset:active {
+    box-shadow: 0 0 2px 2px #d45366;
+}
+
 @media (max-width: 559px) {
   .counter-app-inner {
     margin-top: 90px;
