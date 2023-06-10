@@ -1,16 +1,26 @@
-let buttonCounter = document.querySelector(".counter-btn");
-let buttonReset = document.querySelector(".counter-btn-reset");
-let counterNumber = document.querySelector(".counter-number");
-let counter = 0;
+const counterEl = document.getElementById("counterValue");
+const addOnePoolButton = document.getElementById("addOnePoolButton");
+const addTwoPoolsButton = document.getElementById("addTwoPoolsButton");
+const resetButton = document.getElementById("resetButton");
 
-buttonCounter.addEventListener("click", function () {
+const COUNT_INITIAL_VALUE = 0;
+
+let counter = COUNT_INITIAL_VALUE;
+counterEl.innerText = counter;
+
+addOnePoolButton.addEventListener("click", function() {
   counter = counter + 1;
+  console.log(counter)
 
-  counterNumber.innerText = counter;
+  counterEl.innerText = counter;
 });
 
-buttonReset.addEventListener("click", function () {
-  counter = counter * 0;
+addTwoPoolsButton.addEventListener("click", function () {
+  counter = counter + 2;
+  counterEl.innerText = counter;
+});
 
-  counterNumber.innerText = counter;
+resetButton.addEventListener("click", function () {
+  counter = COUNT_INITIAL_VALUE;
+  counterEl.innerText = counter;
 });
